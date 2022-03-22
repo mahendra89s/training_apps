@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.EnterQuantityFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/tvProductNameQuantScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33.33dp"
+            android:fontFamily="@font/gotham_book"
+            android:textColor="#2c2b2b"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgProductQuantScreen"
+            android:layout_width="257.33dp"
+            android:layout_height="178dp"
+            android:layout_marginTop="33.33dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProductNameQuantScreen" />
+
+        <TextView
+            android:id="@+id/tvEnterQuant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33.33dp"
+            android:fontFamily="@font/gotham_book"
+            android:text="Enter Qty"
+            android:textColor="#2c2b2b"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgProductQuantScreen" />
+
+        <EditText
+            android:id="@+id/edtEnterQuantity"
+            android:layout_width="112dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="22dp"
+            android:textAlignment="center"
+            android:background="@drawable/green_border"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEnterQuant" />
+
+        <TextView
+            android:id="@+id/btnSubmitQuantity"
+            android:layout_width="198.33dp"
+            android:layout_height="47.33dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="33.33dp"
+            android:background="@drawable/circular_border_red"
+            android:gravity="center"
+            android:text="SUBMIT"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtEnterQuantity" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "897439584224",
+    "project_id": "realm-db-e9a85",
+    "storage_bucket": "realm-db-e9a85.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897439584224:android:f37a6eba605d1df511e585",
+        "android_client_info": {
+          "package_name": "com.example.realmdb2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897439584224-mb9cegb4ocogikrk44696121ekfji6um.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC66it_IHo1GfG9FG7Wvartq-0fhWOYL2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897439584224-mb9cegb4ocogikrk44696121ekfji6um.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

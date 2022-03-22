@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.neosoftstore.fragment.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_productListingFragment"
+            app:destination="@id/productListingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/productListingFragment"
+        android:name="com.example.neosoftstore.fragment.ProductListingFragment"
+        tools:layout="@layout/fragment_product_listing">
+        <argument
+            android:name="product_category_id"
+            app:argType="integer" />
+        <argument
+            android:name="catName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_productListingFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.neosoftstore.fragment.ProductDetailsFragment"
+        tools:layout="@layout/fragment_product_details">
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_enterQuantityFragment"
+            app:destination="@id/enterQuantityFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_ratingFragment"
+            app:destination="@id/ratingFragment" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="www.neostore.com/products/{productId}" />
+    </fragment>
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.example.neosoftstore.fragment.MyAccountFragment"
+        tools:layout="@layout/fragment_my_account" >
+        <action
+            android:id="@+id/action_myAccountFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.neosoftstore.fragment.EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile" />
+    <dialog
+        android:id="@+id/enterQuantityFragment"
+        android:name="com.example.neosoftstore.fragment.EnterQuantityFragment"
+        tools:layout="@layout/fragment_enter_quantity" >
+        <argument
+            android:name="PassDatatoQuantityScreen"
+            app:argType="com.example.neosoftstore.models.QuantitySceenDataModel" />
+    </dialog>
+    <dialog
+        android:id="@+id/ratingFragment"
+        android:name="com.example.neosoftstore.fragment.RatingFragment"
+        tools:layout="@layout/fragment_rating" >
+        <argument
+            android:name="PassDataToRatingScreen"
+            app:argType="com.example.neosoftstore.models.QuantitySceenDataModel" />
+    </dialog>
+    <fragment
+        android:id="@+id/myCartFragment"
+        android:name="com.example.neosoftstore.fragment.MyCartFragment"
+        tools:layout="@layout/fragment_my_cart" >
+        <action
+            android:id="@+id/action_myCartFragment_to_listAddressFragment"
+            app:destination="@id/listAddressFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/listAddressFragment"
+        android:name="com.example.neosoftstore.fragment.ListAddressFragment"
+        tools:layout="@layout/fragment_list_address">
+        <action
+            android:id="@+id/action_listAddressFragment_to_addAddressFragment"
+            app:destination="@id/addAddressFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_listAddressFragment_to_myOrderFragment"
+            app:destination="@id/myOrderFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="com.example.neosoftstore.fragment.AddAddressFragment"
+        tools:layout="@layout/fragment_add_address" />
+    <fragment
+        android:id="@+id/myOrderFragment"
+        android:name="com.example.neosoftstore.fragment.MyOrderFragment"
+        tools:layout="@layout/fragment_my_order" >
+        <action
+            android:id="@+id/action_myOrderFragment_to_orderDetailsScreen"
+            app:destination="@id/orderDetailsScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsScreen"
+        android:name="com.example.neosoftstore.fragment.OrderDetailFragment"
+        tools:layout="@layout/fragment_order_details_screen" >
+        <argument
+            android:name="Order_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.example.neosoftstore.fragment.ResetPasswordFragment"
+        tools:layout="@layout/fragment_reset_password" />
+    <fragment
+        android:id="@+id/storeLocatorFragment"
+        android:name="com.example.neosoftstore.fragment.StoreLocatorFragment"
+        tools:layout="@layout/fragment_store_locator" />
+</navigation>

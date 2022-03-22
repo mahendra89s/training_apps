@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".RegisterActivity"
+    android:background="#E91C1A">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E91C1A">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_reg"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#E91C1A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/gotham_medium"
+                android:text="Register"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="33.33dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_reg">
+
+            <TextView
+                android:id="@+id/tvRegNeostore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gotham_bold"
+                android:textAlignment="center"
+                android:text="NeoSTORE"
+                android:textColor="#FFFFFF"
+                android:textSize="45sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/regUsernameLayout"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/white_border"
+                android:layout_marginTop="29.33dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegNeostore">
+
+                <ImageView
+                    android:id="@+id/ivFirstName"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/username_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/edtFirstName"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtFirstName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/gotham_medium"
+                    android:hint="First Name"
+                    android:inputType="text"
+
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toRightOf="@id/ivFirstName"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/regLastNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_border"
+                android:layout_marginTop="13.33dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regUsernameLayout">
+
+                <ImageView
+                    android:id="@+id/ivLastName"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/username_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/edtLastName"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtLastName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/gotham_medium"
+                    android:hint="Last Name"
+                    android:inputType="text"
+
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/ivLastName"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/regEmailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_border"
+                android:layout_marginTop="13.33dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/regLastNameLayout">
+
+                <ImageView
+                    android:id="@+id/ivEmailReg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/email_icon"
+                    app:layout_constraintRight_toLeftOf="@+id/edtEmailReg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtEmailReg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/gotham_medium"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/ivEmailReg"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/regPasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_border"
+                android:layout_marginTop="13.33dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/regEmailLayout">
+
+                <ImageView
+                    android:id="@+id/ivPassReg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/password_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/edtPassReg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtPassReg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/gotham_medium"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toRightOf="@+id/ivPassReg"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/regConfPassLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_border"
+                android:layout_marginTop="13.33dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/regPasswordLayout">
+
+                <ImageView
+                    android:id="@+id/ivConfPassReg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/password_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/edtConfPassReg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtConfPassReg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/gotham_medium"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toRightOf="@+id/ivConfPassReg"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/regGenderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/regConfPassLayout">
+
+                <TextView
+                    android:id="@+id/tvGenderReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_medium"
+                    android:gravity="center_vertical"
+                    android:text="Gender"
+                    android:paddingVertical="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintRight_toLeftOf="@id/regRadioGroup"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioGroup
+                    android:id="@+id/regRadioGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tvGenderReg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/rdMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:background="@android:color/transparent"
+                            android:drawableStart="@drawable/radio_button_selector"
+                            android:drawablePadding="10dp"
+
+
+                            android:text="Male"
+                            android:checked="true"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintRight_toLeftOf="@id/rdFemale"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <RadioButton
+                            android:id="@+id/rdFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:background="@android:color/transparent"
+                            android:drawableStart="@drawable/radio_button_selector"
+                            android:drawablePadding="10dp"
+                            android:checked="false"
+                            android:text="Female"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintLeft_toRightOf="@id/rdMale"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </RadioGroup>
+<!--                                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                                    android:id="@+id/regRadioGroup"-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:orientation="horizontal"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintLeft_toRightOf="@+id/tvGenderReg"-->
+<!--                                    app:layout_constraintRight_toRightOf="parent"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                                        android:id="@+id/rdMale"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                                        app:layout_constraintRight_toLeftOf="@+id/rdFemale"-->
+<!--                                        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:id="@+id/radioButtonMale"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:src="@drawable/chkn"-->
+<!--                                            android:layout_marginEnd="5dp"-->
+<!--                                            app:layout_constraintRight_toLeftOf="@+id/tvMale"-->
+<!--                                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                                        <TextView-->
+<!--                                            android:id="@+id/tvMale"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:fontFamily="@font/gotham_medium"-->
+<!--                                            android:text="Male"-->
+<!--                                            android:textColor="#FFFFFF"-->
+<!--                                            android:textSize="16dp"-->
+<!--                                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                                            app:layout_constraintRight_toRightOf="parent"-->
+<!--                                            app:layout_constraintLeft_toRightOf="@+id/radioButtonMale"/>-->
+<!--                                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                                        android:id="@+id/rdFemale"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                        app:layout_constraintLeft_toRightOf="@+id/rdMale"-->
+<!--                                        app:layout_constraintRight_toRightOf="parent"-->
+<!--                                        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:id="@+id/radioButtonFemale"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:src="@drawable/chkn"-->
+<!--                                            android:layout_marginEnd="5dp"-->
+<!--                                            app:layout_constraintRight_toLeftOf="@+id/tvFemale"-->
+<!--                                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                                            app:layout_constraintLeft_toLeftOf="parent" />-->
+
+<!--                                        <TextView-->
+<!--                                            android:id="@+id/tvFemale"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:fontFamily="@font/gotham_medium"-->
+<!--                                            android:text="Female"-->
+<!--                                            android:textColor="#FFFFFF"-->
+<!--                                            android:textSize="16dp"-->
+<!--                                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                                            app:layout_constraintLeft_toRightOf="@id/radioButtonFemale"-->
+<!--                                            app:layout_constraintRight_toRightOf="parent"/>-->
+<!--                                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                                </androidx.constraintlayout.widget.ConstraintLayout>-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/regPhoneLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/white_border"
+                android:layout_marginTop="23dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/regGenderLayout">
+
+                <ImageView
+                    android:id="@+id/ivPhoneReg"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/cellphone"
+                    app:layout_constraintRight_toLeftOf="@+id/edtPhoneReg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <EditText
+                    android:id="@+id/edtPhoneReg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/gotham_medium"
+                    android:hint="Phone Number"
+                    android:inputType="number"
+
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toRightOf="@+id/ivPhoneReg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/regTermsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/regPhoneLayout">
+
+                <ImageView
+                    android:id="@+id/checkAgreeReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/uncheck_icon"
+                    app:layout_constraintRight_toLeftOf="@id/tvAgreeReg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvAgreeReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_medium"
+                    android:text="I agree the "
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintLeft_toRightOf="@id/checkAgreeReg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTermsReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_medium"
+                    android:text="@string/terms_conditions"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toRightOf="@id/tvAgreeReg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/regBtnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="47.33dp"
+                android:layout_marginTop="13.33dp"
+                android:fontFamily="@font/gotham_medium"
+                android:text="REGISTER"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:background="@drawable/circular_border_white"
+                android:textColor="#E91C1A"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regTermsLayout"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

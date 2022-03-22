@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Harry Potter</string>
+    <string name="slytherin">Slytherin</string>
+    <string name="ravenclaw">Ravenclaw</string>
+    <string name="hufflepuff">Hufflepuff</string>
+    <string name="gryffindor">Gryffindor</string>
+</resources>

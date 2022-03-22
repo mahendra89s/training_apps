@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">NeoSOFT Store</string>
+    <string name="terms_conditions"><u>Terms &amp; Conditions</u></string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="price">Rs. %1d</string>
+    <string name="category">Category - %1s</string>
+    <string name="priceMyCart">\u20B9%1s</string>
+    <string name="categoryMyCart">(%1s)</string>
+    <string name="address">%1s,%2s,%3s-%4s,%5s,%6s</string>
+    <string name="orderId">Order ID : %1s</string>
+    <string name="orderDate">Ordered Date : %1s</string>
+    <string name="quantity">QTY : %1s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "691595351907",
+    "project_id": "fcmtraining-c1ff1",
+    "storage_bucket": "fcmtraining-c1ff1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691595351907:android:2f8300d52414e446f1e556",
+        "android_client_info": {
+          "package_name": "com.example.fcm_training"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691595351907-6n2jdjbn9jhk3fp61ut8n4jl4eibu8ge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjq-FjEn7K6HyvJNR_sORN5YhoAoSGurs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691595351907-6n2jdjbn9jhk3fp61ut8n4jl4eibu8ge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

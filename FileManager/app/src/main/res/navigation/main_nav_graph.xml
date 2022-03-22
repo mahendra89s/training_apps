@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.filemanager.HomeFragment"
+        android:label="File Explorer"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_internalStorageFragment"
+            app:destination="@id/internalStorageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFilesFragment"
+            app:destination="@id/categoryFilesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/internalStorageFragment"
+        android:name="com.example.filemanager.InternalStorageFragment"
+        android:label="Internal Storage"
+        tools:layout="@layout/fragment_internal_storage">
+
+        <action
+            android:id="@+id/action_internalStorageFragment_to_folderEmptyFragment"
+            app:destination="@id/folderEmptyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/folderEmptyFragment"
+        android:name="com.example.filemanager.FolderEmptyFragment"
+        android:label="Internal Storage"
+        tools:layout="@layout/fragment_folder_empty" />
+    <fragment
+        android:id="@+id/categoryFilesFragment"
+        android:name="com.example.filemanager.CategoryFilesFragment"
+        android:label="{category}"
+        tools:layout="@layout/fragment_category_files" >
+        <argument
+            android:name="category"
+            app:argType="string"
+            android:defaultValue="Category" />
+    </fragment>
+
+
+</navigation>

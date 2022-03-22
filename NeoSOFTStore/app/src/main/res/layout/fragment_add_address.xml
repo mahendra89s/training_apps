@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".fragment.AddAddressFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0">
+
+        <TextView
+            android:id="@+id/tvAddressAddScreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="26.67dp"
+            android:fontFamily="@font/gotham_medium"
+            android:text="ADDRESS"
+            android:textColor="#333333"
+            android:textSize="16.67dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtAddressAddScreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="16.67dp"
+            android:fontFamily="@font/gotham_book"
+            android:lines="5"
+            android:hint="ADDRESS"
+            android:gravity="top"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:background="@color/white"
+            android:textColor="#333333"
+            android:textSize="16.67dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddressAddScreen" />
+        <TextView
+            android:id="@+id/tvCityAddScreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="26.67dp"
+            android:fontFamily="@font/gotham_medium"
+            android:text="LANDMARK"
+            android:textColor="#333333"
+            android:textSize="16.67dp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtAddressAddScreen" />
+
+        <EditText
+            android:id="@+id/edtLandmarkAddScreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="16.67dp"
+            android:fontFamily="@font/gotham_book"
+            android:background="@color/white"
+            android:textColor="#333333"
+            android:textSize="13.33sp"
+            android:hint="LANDMARK"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCityAddScreen" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="6.67dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/constraintLayoutAddress2"
+            app:layout_constraintTop_toBottomOf="@id/edtLandmarkAddScreen">
+            <TextView
+                android:id="@+id/tvCity2AddScreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26.67dp"
+                android:fontFamily="@font/gotham_medium"
+                android:text="CITY"
+                android:textColor="#333333"
+                android:textSize="16.67dp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtCityAddScreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.67dp"
+                android:fontFamily="@font/gotham_book"
+                android:background="@color/white"
+                android:textColor="#333333"
+                android:textSize="13.33sp"
+                android:hint="CITY"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCity2AddScreen" />
+            <TextView
+                android:id="@+id/tvZipAddScreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26.67dp"
+                android:fontFamily="@font/gotham_medium"
+                android:text="ZIP CODE"
+                android:textColor="#333333"
+                android:textSize="16.67dp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtCityAddScreen" />
+
+            <EditText
+                android:id="@+id/edtZipAddScreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.67dp"
+                android:fontFamily="@font/gotham_book"
+                android:background="@color/white"
+                android:textColor="#333333"
+                android:inputType="number"
+                android:textSize="13.33sp"
+                android:hint="ZIPCODE"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvZipAddScreen" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutAddress2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="6.67dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/constraintLayoutAddress"
+            app:layout_constraintTop_toBottomOf="@id/edtLandmarkAddScreen">
+            <TextView
+                android:id="@+id/tvStateAddScreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26.67dp"
+                android:fontFamily="@font/gotham_medium"
+                android:text="STATE"
+                android:textColor="#333333"
+                android:textSize="16.67dp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtStateAddScreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.67dp"
+                android:fontFamily="@font/gotham_book"
+                android:background="@color/white"
+                android:textColor="#333333"
+                android:textSize="13.33sp"
+                android:hint="STATE"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStateAddScreen" />
+            <TextView
+                android:id="@+id/tvCountryAddScreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26.67dp"
+                android:fontFamily="@font/gotham_medium"
+                android:text="COUNTRY"
+                android:textColor="#333333"
+                android:textSize="16.67dp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtStateAddScreen" />
+
+            <EditText
+                android:id="@+id/edtCountryAddScreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.67dp"
+                android:fontFamily="@font/gotham_book"
+                android:background="@color/white"
+                android:textColor="#333333"
+                android:hint="COUNTRY"
+                android:textSize="13.33sp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCountryAddScreen" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/btnAddAddress"
+            android:layout_width="match_parent"
+            android:layout_height="47.33dp"
+            android:background="@drawable/circular_border_red"
+            android:gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:text="SAVE ADDRESS"
+            android:layout_marginTop="26.67dp"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutAddress" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

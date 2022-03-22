@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp1">
+        <item
+
+            android:id="@+id/menuMyCart"
+            android:title="My Cart"
+            android:icon="@drawable/shopping_cart"
+            app:actionLayout="@layout/menu_badges"
+            >
+        </item>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp2">
+        <item
+            android:id="@+id/menuTable"
+            android:title="Tables"
+            android:icon="@drawable/tables_icon">
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp3">
+        <item
+            android:id="@+id/menuSofas"
+            android:title="Sofas"
+            android:icon="@drawable/sofa_icon">
+        </item>
+    </group>
+    <group android:checkableBehavior="single" android:id="@+id/grp4">
+        <item
+            android:id="@+id/menuChairs"
+            android:title="Chairs"
+            android:icon="@drawable/chair_icon">
+        </item>
+
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/grp5">
+        <item
+            android:id="@+id/menuCupboards"
+            android:title="Cupboards"
+            android:icon="@drawable/cupboard_icon">
+        </item>
+
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/grp6">
+        <item
+            android:id="@+id/menuMyAccount"
+            android:title="My Account"
+            android:icon="@drawable/username_icon">
+        </item>
+
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/grp7">
+
+        <item
+            android:id="@+id/menuStoreLocator"
+            android:title="Store Locator"
+            android:icon="@drawable/storelocator_icon">
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/grp8">
+        <item
+            android:id="@+id/menuMyOrders"
+            android:title="My Orders"
+            android:icon="@drawable/myorders_icon">
+        </item>
+
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/grp9">
+        <item
+            android:id="@+id/menuLogout"
+            android:title="Logout"
+            android:icon="@drawable/logout_icon">
+        </item>
+
+    </group>
+
+
+</menu>

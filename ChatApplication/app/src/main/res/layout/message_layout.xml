@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="binding"
+            type="com.example.chatapplication.data.model.Message" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/messageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="10dp"
+        android:gravity="end"
+        android:layout_marginHorizontal="5dp">
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxWidth="300dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="@{binding.message}"
+            android:background="@drawable/message_layout"/>
+    </LinearLayout>
+</layout>
